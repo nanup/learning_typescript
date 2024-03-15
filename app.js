@@ -1,20 +1,9 @@
-var person = {
-    name: 'nanu',
-    age: 25,
-    hobbies: ['sports', 'cooking'],
-    role: [1, 'author'],
-};
-var Role;
-(function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
-})(Role || (Role = {}));
-var newPerson = {
-    name: 'nanu',
-    age: 30,
-    hobbies: ['one', 'two'],
-    role: Role.ADMIN,
-};
-var favoriteHobbies = ['one', 'nanu'];
-console.log(newPerson.role);
+function add(n1, n2) {
+    return n1 + n2;
+}
+function printResult(num) {
+    console.log('Result ' + num);
+}
+printResult(add(5, 7));
+var combineValues = add;
+console.log(combineValues(8, 8));
